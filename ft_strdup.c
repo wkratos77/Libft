@@ -1,23 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wkrati <wkrati@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 14:46:58 by wkrati            #+#    #+#             */
-/*   Updated: 2025/10/14 14:57:07 by wkrati           ###   ########.fr       */
+/*   Created: 2025/10/16 18:59:22 by wkrati            #+#    #+#             */
+/*   Updated: 2025/10/17 13:52:23 by wkrati           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strdup(const char *s1)
 {
-	size_t	i;
+	int		i;
+	int		j;
+	char	*up;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (s1[i])
 		i++;
-	return (i);
+	up = malloc(sizeof(char) * (i + 1));
+	if (!up)
+		return (NULL);
+	j = 0;
+	while (j < i)
+	{
+		up[j] = s1[j];
+		j++;
+	}
+	up[j] = '\0';
+	return (up);
 }
+/*
+int	main(void)
+{
+	char	s[] = "walid";
+	printf("%s\n", ft_strdup(s));
+}
+*/

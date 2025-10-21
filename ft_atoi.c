@@ -1,23 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wkrati <wkrati@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 14:46:58 by wkrati            #+#    #+#             */
-/*   Updated: 2025/10/14 14:57:07 by wkrati           ###   ########.fr       */
+/*   Created: 2025/10/14 20:08:46 by wkrati            #+#    #+#             */
+/*   Updated: 2025/10/14 20:38:21 by wkrati           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_atoi(const char *str)
 {
-	size_t	i;
+	int		i;
+	long	r;
+	int		s;
 
 	i = 0;
-	while (s[i] != '\0')
+	r = 0;
+	s = 1;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
-	return (i);
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+		{
+			s = s * (-1);
+		}
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		r = r * 10 + (str[i] - 48);
+		i++;
+	}
+	return (r * s);
 }

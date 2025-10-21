@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wkrati <wkrati@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 14:46:58 by wkrati            #+#    #+#             */
-/*   Updated: 2025/10/14 14:57:07 by wkrati           ###   ########.fr       */
+/*   Created: 2025/10/16 16:06:10 by wkrati            #+#    #+#             */
+/*   Updated: 2025/10/20 18:04:22 by wkrati           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (s[i] && s[i] != (char)c)
 		i++;
-	return (i);
+	if (s[i] == (char)c)
+		return ((char *)&s[i]);
+	else
+		return (NULL);
 }
+/*
+#include <stdio.h>
+
+int	main()
+{
+	char	s[]= "walid";
+	printf("%s",ft_strchr(s,'a'));
+}*/
