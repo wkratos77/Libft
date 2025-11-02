@@ -10,7 +10,7 @@ Libft is the first project at [1337 School](https://42.fr) that consists of re-c
 
 > *A foundation library built from scratch to understand memory, pointers, and data structures in C.*
 
-## 🧠 Overview
+##  Overview
 
 The goal of Libft is to understand, implement, and master the core mechanisms of C programming:
 - Memory management (`malloc`, `free`, pointer arithmetic)
@@ -23,7 +23,7 @@ You end up with your **own library**, `libft.a`, that can be linked to any futur
 
 ---
 
-## ⚙️ Compilation
+##  Compilation
 
 Clone the repository and run:
 
@@ -34,7 +34,7 @@ make clean    # removes object files
 make fclean   # removes objects and libft.a
 make re       # rebuild everything`
 ```
-## 📁 Project Structure
+##  Project Structure
 
 ```text
 libft/
@@ -97,7 +97,7 @@ cc main.c libft.a -o my_program
 | Segfaults | 🚫 None |
 | Compilation flags | `-Wall -Wextra -Werror` |
 
-## 👨‍💻 Author
+## Author
 
 **Walid Krati** [wkrati] 
 
