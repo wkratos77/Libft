@@ -105,4 +105,4 @@ AKA: Kratos
 
 🎓 1337 / 42 Network  
 
-🔗 [GitHub — @wkratos77](https://github.com/wkratos77)
+[GitHub — @wkratos77](https://github.com/wkratos77)
