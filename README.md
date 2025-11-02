@@ -8,7 +8,7 @@ Libft is the first project at [1337 School](https://42.fr) that consists of re-c
 ![Norminette](https://img.shields.io/badge/Norminette-100%25-green?style=flat-square)
 ![License](https://img.shields.io/badge/License-42-blue?style=flat-square)
 
-> 🧰 *A foundation library built from scratch to understand memory, pointers, and data structures in C.*
+> *A foundation library built from scratch to understand memory, pointers, and data structures in C.*
 
 ## 🧠 Overview
 
